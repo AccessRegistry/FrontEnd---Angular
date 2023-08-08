@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExibicaoComponent } from './exibicao/exibicao.component';
+import { DataService } from './services/service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ExibicaoComponent } from './exibicao/exibicao.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

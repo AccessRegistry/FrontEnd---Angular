@@ -4,7 +4,7 @@
   </div>
 
   <div class="title">
-    <h2>{{ dados.nome }} {{ dados.sobrenome }}</h2>
+    <h2>{{ ultimoCadastro }}</h2>
   </div>
 </header>
 
@@ -18,12 +18,12 @@
         <th>E-MAIL</th>
         <th>CPF</th>
       </tr>
-      <tr>
-        <td>{{ dados.nome }}</td>
-        <td>{{ dados.sobrenome }}</td>
-        <td>{{ dados.dataNascimento }}</td>
-        <td>{{ dados.email }}</td>
-        <td>{{ dados.cpf }}</td>
+      <tr *ngFor="let registro of dados">
+        <td>{{ registro.nome }}</td>
+        <td>{{ registro.sobrenome }}</td>
+        <td>{{ registro.dataNascimento }}</td>
+        <td>{{ registro.email }}</td>
+        <td>{{ registro.cpf }}</td>
       </tr>
     </table>
   </div>

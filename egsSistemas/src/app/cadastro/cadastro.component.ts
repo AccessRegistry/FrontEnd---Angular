@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../services/service';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,10 +16,12 @@ export class CadastroComponent {
     cpf: ''
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,  private dataService: DataService) {}
 
   salvar() {
+    this.dataService.dados.push(this.dados);
+
     // Redireciona para a página de exibição dos dados cadastrados
-    this.router.navigate(['/exibicao'], { queryParams: this.dados });
+    this.router.navigate(['/exibicao']);
   }
 }

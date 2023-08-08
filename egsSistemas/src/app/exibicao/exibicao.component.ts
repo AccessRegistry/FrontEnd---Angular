@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router  } from '@angular/router';
+import {  Router  } from '@angular/router';
+import { DataService } from '../services/service';
 
 @Component({
   selector: 'app-exibicao',
@@ -7,17 +8,24 @@ import { ActivatedRoute, Router  } from '@angular/router';
   styleUrls: ['./exibicao.component.css']
 })
 export class ExibicaoComponent implements OnInit {
-  dados: any;
+  dados: any[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private router: Router, private dataService: DataService) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.dados = params;
-    });
+    this.dados = this.dataService.dados;
   }
 
   voltarTelaHome() {
     this.router.navigate(['/cadastro']);
   }
+
+  get ultimoCadastro() {
+    if (this.dados.length > 0) {
+      const ultimo = this.dados[this.dados.length - 1];
+      return `${ultimo.nome} ${ultimo.sobrenome}`;
+    }
+    return '';
+  }
+
 }
