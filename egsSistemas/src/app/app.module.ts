@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importe o FormsModule
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,7 @@ import { ExibicaoComponent } from './exibicao/exibicao.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule, // Adicione o FormsModule aqui
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

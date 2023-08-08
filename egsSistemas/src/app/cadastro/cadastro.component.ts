@@ -18,7 +18,7 @@ export class CadastroComponent {
   constructor(private router: Router) {}
 
   salvar() {
-    // Redirecionar para a página de exibição dos dados cadastrados
+    // Redireciona para a página de exibição dos dados cadastrados
     this.router.navigate(['/exibicao'], { state: { dados: this.dados } });
   }
 }

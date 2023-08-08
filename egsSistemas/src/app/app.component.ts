@@ -15,6 +15,10 @@ export class AppComponent {
     cpf: ''
   };
 
+    // Padrões de máscaras
+    cpfMask = '000.000.000-00';
+    dataNascimentoMask = '00/00/0000';
+
   constructor(private router: Router) {}
 
   salvar() {
