@@ -16,17 +16,20 @@
           [(ngModel)]="dados.sobrenome">
 
         <label for="data_nascimento">Idade</label>
-        <input type="text" placeholder="00/00/0000" id="data_nascimento" name="data_nascimento" required
-          [(ngModel)]="dados.dataNascimento">
+        <input type="text" placeholder="dd/mm/yyyy" id="data_nascimento" name="data_nascimento" required
+          [(ngModel)]="dados.dataNascimento" (input)="dados.dataNascimento = aplicarMascaraData(dados.dataNascimento)"
+          maxlength="10">
 
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Escreva seu e-mail" id="email" name="email" required [(ngModel)]="dados.email">
+        <input type="text" placeholder="Escreva seu e-mail" id="email" name="email" required [(ngModel)]="dados.email"
+          (input)="dados.email = aplicarMascaraEmail(dados.email)">
 
         <label for="cpf">CPF</label>
-        <input type="text" placeholder="000.000.000-00" id="cpf" name="cpf" required [(ngModel)]="dados.cpf">
+        <input type="text" placeholder="000.000.000-00" id="cpf" name="cpf" required [(ngModel)]="dados.cpf"
+          (input)="dados.cpf = aplicarMascaraCPF(dados.cpf)" maxlength="14">
 
         <div class="terms">
-          <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+          <input type="checkbox" id="acceptTerms" name="acceptTerms" required [(ngModel)]="aceitouTermos">
           <label for="acceptTerms">Aceito os termos e condições</label>
         </div>
 
