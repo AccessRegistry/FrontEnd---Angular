@@ -1,15 +1,21 @@
-<div class="container">
-  <div class="logo">
-    <img src="../../assets/logo.png" alt="Logo da Empresa">
+<header class="header-bar">
+  <div class="logo" (click)="voltarTelaHome()">
+    <img src="../../assets/logo.png" alt="Logo da Empresa" height="100" >
   </div>
+
+  <div class="title">
+    <h2>{{ dados.nome }} {{ dados.sobrenome }}</h2>
+  </div>
+</header>
+
+<div class="container">
   <div class="table">
-    <h2>Dados Cadastrados</h2>
     <table>
       <tr>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Data de Nascimento</th>
-        <th>E-mail</th>
+        <th>NOME</th>
+        <th>SOBRENOME</th>
+        <th>DATA</th>
+        <th>E-MAIL</th>
         <th>CPF</th>
       </tr>
       <tr>

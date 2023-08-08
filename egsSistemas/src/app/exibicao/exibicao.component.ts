@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router  } from '@angular/router';
 
 @Component({
   selector: 'app-exibicao',
@@ -9,11 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 export class ExibicaoComponent implements OnInit {
   dados: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.dados = params;
     });
+  }
+
+  voltarTelaHome() {
+    this.router.navigate(['/cadastro']);
   }
 }
