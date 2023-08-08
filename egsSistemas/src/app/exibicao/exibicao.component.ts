@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,12 +6,14 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './exibicao.component.html',
   styleUrls: ['./exibicao.component.css']
 })
-export class ExibicaoComponent {
+export class ExibicaoComponent implements OnInit {
   dados: any;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.dados = this.route.snapshot.paramMap.get('dados');
+      this.dados = params;
     });
   }
 }

@@ -19,6 +19,6 @@ export class CadastroComponent {
 
   salvar() {
     // Redireciona para a página de exibição dos dados cadastrados
-    this.router.navigate(['/exibicao'], { state: { dados: this.dados } });
+    this.router.navigate(['/exibicao'], { queryParams: this.dados });
   }
 }
