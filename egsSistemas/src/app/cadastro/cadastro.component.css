@@ -1,0 +1,147 @@
+/* Estilos específicos para a tela de cadastro */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Use min-height para garantir que a cor de fundo preencha toda a tela */
+  background-color: #ecf0f1;
+  margin: 0;
+  /* Remova a margem para evitar espaços em branco nos cantos */
+  padding: 0;
+}
+
+.content {
+  background-color: #1f4f4e;
+  border-radius: 15px;
+  width: 40%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-content {
+  display: flex;
+}
+
+.first-column {
+  background-color: #58af9b;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.first-column img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.second-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 30%;
+  padding: 20px;
+}
+
+.form {
+  width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 8px;
+  color: white;
+}
+
+.form input[type="text"],
+.form input[type="email"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #727171;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.form button {
+  margin-top: 3%;
+  padding: 10px 15px;
+  background-color: #58af9b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.form p {
+  cursor: pointer;
+  color: #727171;
+  text-align: center !important;
+  border-bottom: 0.5px solid #727171;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.second-content {
+  position: absolute;
+  display: none;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 14%;
+}
+
+.description {
+  margin-top: -10%;
+  color: #58af9b;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: -5%;
+}
+
+.terms {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.terms input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.terms label{
+  margin-top: 3.3%;
+  font-size: small;
+}
+

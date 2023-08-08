@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="content first-content">
+    <div class="first-column">
+      <img src="../../assets/logo.png" alt="Logo da Empresa" height="200">
+    </div>
+    <div class="second-column">
+      <h2 class="title">Teste</h2>
+      <p class="description">EGS SISTEMAS</p>
+
+      <form (ngSubmit)="salvar()" class="form"> <!-- Adicione a classe "form" ao formulário -->
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Escreva seu nome" id="nome" name="nome" required [(ngModel)]="dados.nome">
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" placeholder="Escreva seu sobrenome" id="sobrenome" name="sobrenome" required
+          [(ngModel)]="dados.sobrenome">
+
+        <label for="data_nascimento">Idade</label>
+        <input type="text" placeholder="00/00/0000" id="data_nascimento" name="data_nascimento" required
+          [(ngModel)]="dados.dataNascimento">
+
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Escreva seu e-mail" id="email" name="email" required [(ngModel)]="dados.email">
+
+        <label for="cpf">CPF</label>
+        <input type="text" placeholder="000.000.000-00" id="cpf" name="cpf" required [(ngModel)]="dados.cpf">
+
+        <div class="terms">
+          <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+          <label for="acceptTerms">Aceito os termos e condições</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+        <p>I'm already a member</p>
+      </form>
+    </div>
+  </div>
+  <div class="container second-content"></div>
+
+
+</div>

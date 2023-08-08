@@ -1,0 +1,26 @@
+/* Estilos globais para a página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tamanho da viewport */
+}
+
+.logo {
+  width: 30%;
+  padding: 20px;
+}
+
+.form {
+  width: 70%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
